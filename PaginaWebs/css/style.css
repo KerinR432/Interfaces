@@ -1,66 +1,42 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-main{
-    display: flex;
-}
+
 .navbar {
-  background: #333;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
 .hamburguesa {
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  display: none; 
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
-.card-main{
-    width: 25%;
-    background-color: #BFBCAE;
-    height: 100%;
-}
-img{
-    width: 100%;
-}
-.title{
-    width: 100%;
-    font-size: 1rem;
-    padding: .1rem;
-    margin: .2rem;
-}
-.text-main{
-    width: 75%;
-    height: 100%;
-}
-footer{
-    display: block;
-    width: 100%;
-}
 /*Movil*/
 @media (max-width: 768px) {
     .hamburguesa {
-        display: block; 
+        display: block;
     }
 
     .nav-links {
@@ -76,61 +52,153 @@ footer{
     .nav-links.active {
         display: flex;
     }
-    
-    img{
+
+    img {
         width: 100%;
     }
-    .title{
+
+    .title {
         background-color: #BFBCAE;
 
     }
-    .card-main h2{
+
+    .card-main h2 {
         font-size: 1.2rem;
         text-align: center;
         padding: .5rem;
     }
 
-    .present-text-main{
+    .present-text-main {
         margin: .7rem;
     }
-    .present-text-main h1{
+
+    .present-text-main h1 {
         text-align: center;
         font-size: 2rem;
         margin: 1.2rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    .present-text-main p{
+
+    .present-text-main p {
         text-align: justify;
         margin: .3rem;
         font-size: 1.3rem;
     }
-    .appearance-text-main h1{
+
+    .appearance-text-main h1 {
         text-align: center;
         font-size: 2rem;
         margin: 1.2rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    .appearance-text-main{
-        margin:.7rem;
+
+    .appearance-text-main {
+        margin: .7rem;
     }
-    .appearance-text-main p{
+
+    .appearance-text-main p {
         text-align: justify;
         margin: .3rem;
         font-size: 1.3rem;
     }
-    footer{
+
+    footer {
         background-color: #BFBCAE;
         padding: .7rem;
         border-top: solid .2rem;
     }
-    .footer-text a i{
+
+    .footer-text a i {
         font-size: 1.5rem;
         margin-right: 10px;
         color: white;
     }
-    .footer-text span{
+
+    .footer-text span {
         width: 100%;
         margin: 2px;
         padding: 2px;
+    }
+}
+
+@media(min-width: 769px) {
+    img {
+        width: 100%;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "navbar navbar"
+            "card-main text-main"
+            "footer footer";
+        height: 100vh;
+    }
+
+    .title {
+        width: 100%;
+        font-size: 1rem;
+        padding: .1rem;
+        margin: .2rem;
+    }
+
+    .text-main {
+        grid-area: text-main;
+        padding: 20px;
+        height: 100%;
+    }
+
+    .present-text-main {
+        margin: 7px;
+    }
+
+    .present-text-main h1 {
+        text-align: center;
+        text-shadow: rgb(204, 164, 91) 2px 4px;
+        margin: 10px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .present-text-main p {
+        text-align: justify;
+        text-emphasis: inherit;
+        font-size: 1.5rem;
+    }
+
+    .card-main {
+        grid-area: card-main;
+        background-color: #BFBCAE;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .appearance-text-main {
+        margin: 7px;
+    }
+
+    .appearance-text-main h1 {
+        text-align: center;
+        text-shadow: rgb(204, 164, 91) 2px 4px;
+        margin: 10px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .appearance-text-main p {
+        text-align: justify;
+        text-emphasis: inherit;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        display: block;
+        width: 100%;
     }
 }
