@@ -1,0 +1,73 @@
+*::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    border: 1px solid black;
+}
+table,th,td{
+    border: 1px solid black;
+}
+
+@media (max-width : 678px) {
+    #caja1{
+        border: 1px solid black;
+        margin: .2rem;
+        position: relative;
+    }
+    .izq{
+        margin: .2rem;
+    }
+    .izq > img{
+        width: 100%;
+        z-index: 1;
+    }
+    .izq > p{
+        font-size: 50px;
+        font-weight: 800;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .der{
+        margin: .4rem;
+    }
+    .der > p{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        margin: .5rem;
+    }
+
+    #caja2{
+        border: 1px solid black;
+        margin: .4rem;
+    }
+    #caja2 > table {
+        padding: .4rem;
+    }
+
+    #caja3{
+        border: 1px solid black;
+        margin: .4rem;
+    }
+    #caja3 > .caja1izq > img{
+        width: 30%;
+        margin: .4rem;
+        height: 250px;
+    }
+    
+    #caja3 > .caja2der > img{
+        margin: .4rem;
+        width: 30%;
+        height: 250px;
+    }
+
+}
